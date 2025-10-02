@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Create necessary directories
-RUN mkdir -p /var/log/apache2 /app
+RUN mkdir -p /var/log/apache2 /app /tmp
 
 # Create sample Apache access log for testing
 RUN echo '192.168.1.100 - - [01/Oct/2025:10:15:30 +0000] "GET /index.html HTTP/1.1" 200 1234 "-" "Mozilla/5.0"' > /var/log/apache2/access.log
